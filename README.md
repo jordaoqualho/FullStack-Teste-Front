@@ -25,7 +25,7 @@ Data Inativação;
 - [x] Dividir Pastas em 2 Repositorios e Fazer o Deploy (Heroku e Vercel)
 - [x] Responsividade
 
-## Improvments
+## Improvements
 
 - [x] Remove 2 Styles Modal
 - [x] Back Comments
