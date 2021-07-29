@@ -39,6 +39,9 @@ export const Modal = styled.form`
     color: white;
     font-size: 14px;
   }
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 export const Input = styled.input`
@@ -89,6 +92,13 @@ export const Buttons = styled.div`
     :hover {
       color: #fff;
       background-color: #495057;
+    }
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    button {
+      width: 100%;
+      margin: 5px 0;
     }
   }
 `;
