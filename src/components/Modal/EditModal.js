@@ -13,7 +13,7 @@ import {
 
 export default function EditModal(props) {
   const conexao = axios.create({
-    baseURL: "http://localhost:8080/",
+    baseURL: process.env.REACT_APP_PORT,
   });
   const { editModal, setEditModal } = props;
   const [aberto, setAberto] = useState(false);
@@ -47,7 +47,7 @@ export default function EditModal(props) {
   };
 
   const doPutMaterial = async () => {
-    await conexao.put(`/material/`, material);
+    await conexao.put(`/material/${material._id}`, material);
   };
 
   useEffect(() => {

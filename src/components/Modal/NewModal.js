@@ -13,13 +13,13 @@ import {
 
 export default function NewModal(props) {
   const conexao = axios.create({
-    baseURL: "http://localhost:8080/",
+    baseURL: process.env.REACT_APP_PORT,
   });
   const { newModal, setNewModal } = props;
   const [aberto, setAberto] = useState(false);
   const [marca, setMarca] = useState([{}]);
-  const [file, setFile] = useState({ file: null });
   const [material, setMaterial] = useState({
+    thumb: "",
     descricao: "",
     marca: "Portobello",
     ativo: "true",
@@ -42,13 +42,22 @@ export default function NewModal(props) {
 
   const doPostMaterial = async () => {
     await conexao.post(`/material/`, material);
-    console.log(material);
+  };
+
+  const doPostFile = async (file) => {
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    };
+    const res = await conexao.post(`/imagen/`, file, config);
+    setMaterial({ ...material, thumb: res.data });
   };
 
   useEffect(() => {
     doGetMarca();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [material.thumb]);
 
   useEffect(() => {
     if (material.ativo === "false") {
@@ -58,6 +67,7 @@ export default function NewModal(props) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [material.ativo]);
+
   const handleModal = () => {
     if (aberto) {
       document.getElementById("modal-container").style.display = "none";
@@ -76,9 +86,10 @@ export default function NewModal(props) {
   });
 
   const handleChangeFile = (event) => {
-    setFile({
-      file: URL.createObjectURL(event.target.files[0]),
-    });
+    const file = event.target.files[0];
+    let formData = new FormData();
+    formData.append("file", file);
+    doPostFile(formData);
   };
 
   const handleSubmit = (e) => {
@@ -100,6 +111,7 @@ export default function NewModal(props) {
     const dataAtaul = diaF + "/" + mesF + "/" + anoF;
     return dataAtaul.toString();
   }
+
   const handleChange = (event) => {
     const novoMaterial = {
       ...material,
@@ -113,9 +125,9 @@ export default function NewModal(props) {
       <Modal onSubmit={handleSubmit}>
         <h1>New Modal</h1>
         <h2>Thumb</h2>
-        <InputImage type="file" onChange={handleChangeFile} />
+        <InputImage type="file" name="file" onChange={handleChangeFile} />
         <Image>
-          <img src={file.file} alt="" />
+          <img src={material.thumb} alt="" />
         </Image>
         <h2>Descrição</h2>
         <Input

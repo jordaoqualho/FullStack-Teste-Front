@@ -9,7 +9,6 @@ import {
   AdderContainer,
   Paragraf,
 } from "./Style";
-import pedra from "img/pedra.jpg";
 import axios from "axios";
 
 import NewModal from "components/Modal/NewModal";
@@ -17,7 +16,7 @@ import EditModal from "components/Modal/EditModal";
 
 export const Home = () => {
   const conexao = axios.create({
-    baseURL: "http://localhost:8080/",
+    baseURL: process.env.REACT_APP_PORT,
   });
   const [material, setMaterial] = useState([{}]);
   const [termoDePesquisa, setTermoDePesquisa] = useState("");
@@ -46,7 +45,7 @@ export const Home = () => {
             key={i}
             onClick={() => setEditModal({ open: true, materialId: row._id })}
           >
-            <img src={pedra} alt="" />
+            <img src={row.thumb} alt="" />
             <MaterialText>
               {row.ativo === "true" ? (
                 <span id="on">disponível</span>
