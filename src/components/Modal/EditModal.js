@@ -18,9 +18,9 @@ export default function EditModal(props) {
   const { editModal, setEditModal } = props;
   const [aberto, setAberto] = useState(false);
   const [marca, setMarca] = useState([{}]);
-  const [file, setFile] = useState({ file: null });
   const [material, setMaterial] = useState({
     _id: "",
+    thumb: "",
     descricao: "",
     ativo: "",
     marca: "",
@@ -84,10 +84,21 @@ export default function EditModal(props) {
     );
   });
 
+  const doPostFile = async (file) => {
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    };
+    const res = await conexao.post(`/imagen/`, file, config);
+    setMaterial({ ...material, thumb: res.data });
+  };
+
   const handleChangeFile = (event) => {
-    setFile({
-      file: URL.createObjectURL(event.target.files[0]),
-    });
+    const file = event.target.files[0];
+    let formData = new FormData();
+    formData.append("file", file);
+    doPostFile(formData);
   };
 
   const handleExcluir = async () => {
@@ -137,7 +148,7 @@ export default function EditModal(props) {
         <h2>Thumb</h2>
         <InputImage type="file" onChange={handleChangeFile} />
         <Image>
-          <img src={file.file} alt="" />
+          <img src={material.thumb} alt="" />
         </Image>
         <h2>Descrição</h2>
         <Input
