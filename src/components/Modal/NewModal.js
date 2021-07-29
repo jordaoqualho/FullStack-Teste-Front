@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import tempAlert from "components/Alert/Alert";
 import axios from "axios";
 import {
-  ModalContainer,
   Modal,
   Input,
   Buttons,
   InputImage,
   Image,
   Select,
+  ModalContainerNew,
 } from "./Style";
 
 export default function NewModal(props) {
@@ -121,14 +121,9 @@ export default function NewModal(props) {
   };
 
   return (
-    <ModalContainer id="modal-container">
+    <ModalContainerNew id="modal-container">
       <Modal onSubmit={handleSubmit}>
-        <h1>New Modal</h1>
-        <h2>Thumb</h2>
-        <InputImage type="file" name="file" onChange={handleChangeFile} />
-        <Image>
-          <img src={material.thumb} alt="" />
-        </Image>
+        <h1>Novo Material</h1>
         <h2>Descrição</h2>
         <Input
           id="descricao"
@@ -165,13 +160,18 @@ export default function NewModal(props) {
           onChange={handleChange}
           required
         />
+        <h2>Imagem</h2>
+        <InputImage type="file" name="file" onChange={handleChangeFile} />
+        <Image>
+          <img src={material.thumb} alt="" />
+        </Image>
         <Buttons>
           <button>Confirmar</button>
-          <button type="button">
-            <a href="/">Cancelar</a>
-          </button>
+          <a href="/">
+            <button type="button">Cancelar</button>
+          </a>
         </Buttons>
       </Modal>
-    </ModalContainer>
+    </ModalContainerNew>
   );
 }

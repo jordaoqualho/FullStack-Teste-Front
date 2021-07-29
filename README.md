@@ -25,7 +25,7 @@ Data Inativação;
 - [x] Dividir Pastas em 2 Repositorios e Fazer o Deploy (Heroku e Vercel)
 - [ ] Responsividade
 
-## Links Uteis
+## Referencias
 
 https://www.portobello.com.br/
 
@@ -47,7 +47,7 @@ https://qastack.com.br/programming/15772394/how-to-upload-display-and-save-image
 
 ## Improvments
 
-- [ ] Remove 2 Styles Modal
+- [x] Remove 2 Styles Modal
 - [ ] Material Container Height non fixable (Adder problem)
 - [ ] Redesing the img input
 - [ ] Transform 2 Modal in one (maybe with one abstracted component)

@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
-export const ModalContainer = styled.div`
+export const ModalContainerEdit = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: none;
+  background-color: rgba(13, 17, 17, 0.05);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(3px);
+  height: calc(100vh - 60px);
+`;
+export const ModalContainerNew = styled.div`
   position: absolute;
   top: 0;
   width: 100vw;
@@ -15,7 +25,7 @@ export const Modal = styled.form`
   width: 50%;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 25px;
   position: absolute;
   border-radius: 20px;
   top: 50%;
@@ -79,10 +89,6 @@ export const Buttons = styled.div`
     :hover {
       color: #fff;
       background-color: #495057;
-    }
-    a {
-      color: inherit;
-      padding: 10px 20px;
     }
   }
 `;

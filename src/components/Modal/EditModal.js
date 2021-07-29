@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import tempAlert from "components/Alert/Alert";
 import axios from "axios";
 import {
-  ModalContainer,
   Modal,
   Input,
   Buttons,
   InputImage,
   Image,
   Select,
-} from "./Style2";
+  ModalContainerEdit,
+} from "./Style";
 
 export default function EditModal(props) {
   const conexao = axios.create({
@@ -142,14 +142,9 @@ export default function EditModal(props) {
   };
 
   return (
-    <ModalContainer id="modal-container-edit">
+    <ModalContainerEdit id="modal-container-edit">
       <Modal onSubmit={handleSubmit}>
-        <h1>Edit Modal</h1>
-        <h2>Thumb</h2>
-        <InputImage type="file" onChange={handleChangeFile} />
-        <Image>
-          <img src={material.thumb} alt="" />
-        </Image>
+        <h1>Editar Material</h1>
         <h2>Descrição</h2>
         <Input
           id="descricao2"
@@ -191,11 +186,17 @@ export default function EditModal(props) {
           onChange={handleChange}
           required
         />
+        <h2>Imagem</h2>
+        <InputImage type="file" onChange={handleChangeFile} />
+        <Image>
+          <img src={material.thumb} alt="" />
+        </Image>
+
         <Buttons>
           <button>Confirmar</button>
-          <button type="button">
-            <a href="/">Cancelar</a>
-          </button>
+          <a href="/">
+            <button type="button">Cancelar</button>
+          </a>
           <button
             type="button"
             onClick={() => {
@@ -206,6 +207,6 @@ export default function EditModal(props) {
           </button>
         </Buttons>
       </Modal>
-    </ModalContainer>
+    </ModalContainerEdit>
   );
 }
