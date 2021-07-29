@@ -47,6 +47,7 @@ export const Material = styled.div`
   width: 250px;
   img {
     height: 70%;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.35);
     width: 100%;
     border-radius: 20px;
   }
@@ -83,6 +84,7 @@ export const AdderButton = styled.button`
   color: #fff;
   border-radius: 50px;
   width: 60px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
   height: 60px;
   text-align: center;
   line-height: 60px;
