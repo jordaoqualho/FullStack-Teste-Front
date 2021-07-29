@@ -66,17 +66,17 @@ export const Home = () => {
       <Header setTermoDePesquisa={setTermoDePesquisa}></Header>
       <Wraper>
         <Container>{materialData}</Container>
-        <AdderContainer>
-          <AdderButton onClick={() => setNewModal(!newModal)}>
-            <h1>+</h1>
-          </AdderButton>
-        </AdderContainer>
         <EditModal
           setEditModal={setEditModal}
           editModal={editModal}
         ></EditModal>
         <NewModal setNewModal={setNewModal} newModal={newModal}></NewModal>
       </Wraper>
+      <AdderContainer>
+        <AdderButton onClick={() => setNewModal(!newModal)}>
+          <h1>+</h1>
+        </AdderButton>
+      </AdderContainer>
     </>
   );
 };

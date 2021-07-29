@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Paragraf = styled.p`
   color: #fff;
+  margin-top: 50px;
   font-size: 20px;
 `;
 
@@ -9,16 +10,20 @@ export const Wraper = styled.div`
   background-color: #212121;
   position: relative;
   width: 100%;
+  padding: 0 70px;
   height: calc(100vh - 60px);
+  @media (max-width: 800px) {
+    padding: 0px 0px;
+  }
 `;
 
 export const Container = styled.div`
   background-color: #212121;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   overflow: auto;
   ::-webkit-scrollbar {
@@ -67,13 +72,12 @@ export const MaterialText = styled.div`
 
 export const AdderContainer = styled.div`
   position: relative;
-  background-color: blue;
 `;
 
 export const AdderButton = styled.button`
   position: absolute;
   background-color: #7ed321;
-  right: 11%;
+  right: 5%;
   bottom: 0px;
   cursor: pointer;
   color: #fff;
