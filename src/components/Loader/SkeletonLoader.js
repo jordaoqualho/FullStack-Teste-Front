@@ -6,15 +6,15 @@ const SkeletonLoader = (props) => (
     <ContentLoader
       speed={2}
       width="100%"
-      height={111}
-      backgroundColor="#f3f3f3"
-      foregroundColor="#ecebeb"
+      height={250}
+      backgroundColor="#fff"
+      foregroundColor="#ecebee"
       {...props}
     >
-      <rect x="0" y="30" rx="5" ry="5" width="10%" height="10" />
-      <rect x="0" y="50" rx="5" ry="5" width="20%" height="35" />
-      <rect x="90%" y="40" rx="5" ry="5" width="10%" height="30" />
-      <rect x="95%" y="75" rx="5" ry="5" width="5%" height="10" />
+      <rect x="0" y="0" rx="20" ry="20" width="100%" height="75%" />
+      <rect x="8%" y="80%" rx="0" ry="20" width="45%" height="5%" />
+      <rect x="8%" y="87%" rx="0" ry="20" width="80%" height="8%" />
+      <rect x="8%" y="96%" rx="0" ry="20" width="55%" height="7%" />
     </ContentLoader>
   </div>
 );

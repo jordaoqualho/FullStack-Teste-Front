@@ -48,7 +48,7 @@ export const Material = styled.div`
   img {
     height: 70%;
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
   }
 `;
 

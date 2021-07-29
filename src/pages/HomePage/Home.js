@@ -12,20 +12,36 @@ import {
 import axios from "axios";
 import NewModal from "components/Modal/NewModal";
 import EditModal from "components/Modal/EditModal";
+import SkeletonLoader from "components/Loader/SkeletonLoader";
 
 export const Home = () => {
   const conexao = axios.create({
     baseURL: process.env.REACT_APP_PORT,
   });
+  const [loading, setLoading] = useState(false);
+  const loadingMaterial = new Array(10);
   const [material, setMaterial] = useState([{}]);
   const [termoDePesquisa, setTermoDePesquisa] = useState("");
   const [newModal, setNewModal] = useState(false);
   const [editModal, setEditModal] = useState({ open: false, materialId: "" });
 
   useEffect(() => {
+    firstDoGetMaterial();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     doGetMaterial(termoDePesquisa);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [termoDePesquisa]);
+
+  const firstDoGetMaterial = async () => {
+    setLoading(true);
+    setTimeout(async () => {
+      doGetMaterial(termoDePesquisa);
+      setLoading(false);
+    }, 1500);
+  };
 
   const doGetMaterial = async (termoDePesquisa) => {
     const response = await conexao.get(
@@ -63,7 +79,19 @@ export const Home = () => {
     <>
       <Header setTermoDePesquisa={setTermoDePesquisa}></Header>
       <Wraper>
-        <Container>{materialData}</Container>
+        <Container>
+          {loading ? (
+            loadingMaterial.fill(10).map((row, i) => {
+              return (
+                <Material key={i}>
+                  <SkeletonLoader></SkeletonLoader>)
+                </Material>
+              );
+            })
+          ) : (
+            <>{materialData}</>
+          )}
+        </Container>
         <EditModal
           setEditModal={setEditModal}
           editModal={editModal}
