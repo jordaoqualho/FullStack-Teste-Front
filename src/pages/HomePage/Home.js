@@ -10,7 +10,6 @@ import {
   Paragraf,
 } from "./Style";
 import axios from "axios";
-
 import NewModal from "components/Modal/NewModal";
 import EditModal from "components/Modal/EditModal";
 
@@ -54,7 +53,6 @@ export const Home = () => {
               )}
               <h2>{row.descricao}</h2>
               <p>{row.marca}</p>
-              <p></p>
             </MaterialText>
           </Material>
         );

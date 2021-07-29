@@ -28,6 +28,7 @@ Data Inativação;
 ## Improvments
 
 - [x] Remove 2 Styles Modal
+- [ ] Back Comments
 - [ ] Skeleton Loader
 - [x] Material Container Height non fixable (Adder problem)
 - [ ] Redesing the img input

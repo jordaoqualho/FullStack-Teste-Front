@@ -9,8 +9,10 @@ export const ModalContainerEdit = styled.div`
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(3px);
   height: calc(100vh - 60px);
+  z-index: 100;
 `;
 export const ModalContainerNew = styled.div`
+  z-index: 100;
   position: absolute;
   top: 0;
   width: 100vw;
