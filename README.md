@@ -25,6 +25,15 @@ Data Inativação;
 - [x] Dividir Pastas em 2 Repositorios e Fazer o Deploy (Heroku e Vercel)
 - [ ] Responsividade
 
+## Improvments
+
+- [x] Remove 2 Styles Modal
+- [ ] Skeleton Loader
+- [ ] Material Container Height non fixable (Adder problem)
+- [ ] Redesing the img input
+- [ ] Transform 2 Modal in one (maybe with one abstracted component)
+- [ ] Fix modal cancela <a> tag funcional width
+
 ## Referencias
 
 https://www.portobello.com.br/
@@ -44,11 +53,3 @@ https://www.youtube.com/watch?v=MkkbUfcZUZM
 https://s3.console.aws.amazon.com/s3/buckets/fullstack-images-teste?region=sa-east-1&tab=objects
 
 https://qastack.com.br/programming/15772394/how-to-upload-display-and-save-images-using-node-js-and-express
-
-## Improvments
-
-- [x] Remove 2 Styles Modal
-- [ ] Material Container Height non fixable (Adder problem)
-- [ ] Redesing the img input
-- [ ] Transform 2 Modal in one (maybe with one abstracted component)
-- [ ] Fix modal cancela <a> tag funcional width
