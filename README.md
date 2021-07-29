@@ -23,16 +23,16 @@ Data Inativação;
 - [x] Modal para Inclusão dos materiais;
 - [x] Subir no github
 - [x] Dividir Pastas em 2 Repositorios e Fazer o Deploy (Heroku e Vercel)
-- [ ] Responsividade
+- [x] Responsividade
 
 ## Improvments
 
 - [x] Remove 2 Styles Modal
 - [ ] Skeleton Loader
-- [ ] Material Container Height non fixable (Adder problem)
+- [x] Material Container Height non fixable (Adder problem)
 - [ ] Redesing the img input
 - [ ] Transform 2 Modal in one (maybe with one abstracted component)
-- [ ] Fix modal cancela <a> tag funcional width
+- [x] Fix modal cancela <a> tag funcional width
 
 ## Referencias
 
