@@ -16,13 +16,14 @@ Data Inativação;
 
 - [x] Criar tabela com marcas
 - [x] Adicionar Marcas a tabelas
-- [x] Listagem responsiva dos materiais, exibindo a thumb, Descrição e Descrição da Marca;
+- [x] Listagem exibindo a thumb, Descrição e Descrição da Marca;
 - [x] Na listagem, incluir um campo texto, para busca por materiais;
-- [] Opções de editar e inativar o material;
+- [x] Opções de editar e inativar o material;
 - [x] Modal para edição, com todas as informações do material, incluindo um combobox para selecionar a marca;
 - [x] Modal para Inclusão dos materiais;
-- [] Subir no github
-- [] Dividir Pastas em 2 Repositorios e Fazer o Deploy (Heroku e Vercel)
+- [x] Subir no github
+- [x] Dividir Pastas em 2 Repositorios e Fazer o Deploy (Heroku e Vercel)
+- [ ] Responsividade
 
 ## Links Uteis
 
@@ -46,8 +47,8 @@ https://qastack.com.br/programming/15772394/how-to-upload-display-and-save-image
 
 ## Improvments
 
-- [] Remove 2 Styles Modal
-- [] Material Container Height non fixable (Adder problem)
-- [] Redesing the img input
-- [] Transform 2 Modal in one (maybe with one abstracted component)
-- [] Fix modal cancela <a> tag funcional width
+- [ ] Remove 2 Styles Modal
+- [ ] Material Container Height non fixable (Adder problem)
+- [ ] Redesing the img input
+- [ ] Transform 2 Modal in one (maybe with one abstracted component)
+- [ ] Fix modal cancela <a> tag funcional width
