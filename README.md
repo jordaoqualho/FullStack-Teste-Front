@@ -28,11 +28,9 @@ Data Inativação;
 ## Improvments
 
 - [x] Remove 2 Styles Modal
-- [ ] Back Comments
-- [ ] Skeleton Loader
+- [x] Back Comments
+- [x] Skeleton Loader
 - [x] Material Container Height non fixable (Adder problem)
-- [ ] Redesing the img input
-- [ ] Transform 2 Modal in one (maybe with one abstracted component)
 - [x] Fix modal cancela <a> tag funcional width
 
 ## Referencias
