@@ -1,6 +1,6 @@
 # FullStack-Front -> CRUD básico de Material
 
-Prazo para entrega: quarta-feira (29/07) às 18:00;
+Prazo para entrega: (29/07) às 18:00;
 
 Stack: React, Node + Express, Mongo;
 
